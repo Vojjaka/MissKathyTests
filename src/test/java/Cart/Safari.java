@@ -1,12 +1,13 @@
 package Cart;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +19,7 @@ public class Safari {
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         driver = new SafariDriver();
         baseUrl = "http://dev.mk2.jujumedia.co.uk/";
@@ -49,7 +50,7 @@ public class Safari {
 
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();

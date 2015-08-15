@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cart"  verbose="1" parallel="tests" thread-count="3">
+    <test name="Test in Chrome" >
+        <classes>
+            <class name="Cart.Chrome" />
+            <class name="PageTitles.Chrome" />
+        </classes>
+    </test>
+    <test name="Test in Firefox" >
+        <classes>
+            <class name="Cart.Firefox" />
+            <class name="PageTitles.Firefox" />
+        </classes>
+    </test>
+    <test name="Test in Safari" >
+        <classes>
+            <class name="Cart.Safari" />
+            <class name="PageTitles.Safari" />
+        </classes>
+    </test>
+</suite>
