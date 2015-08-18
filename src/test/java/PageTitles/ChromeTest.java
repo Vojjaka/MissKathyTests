@@ -19,14 +19,14 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-        public class Chrome {
+        public class ChromeTest {
         private WebDriver driver;
         private String baseUrl;
         private StringBuffer verificationErrors = new StringBuffer();
 
 
         @BeforeClass
-        public void setUp() throws Exception {
+        public void PageTitlesInChrome() throws Exception {
             System.setProperty("webdriver.chrome.driver", "D:\\Vlad\\chromedriver.exe");
             driver = new ChromeDriver();
 //            driver = new FirefoxDriver();

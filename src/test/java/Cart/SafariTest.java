@@ -14,13 +14,13 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-public class Safari {
+public class SafariTest {
     private WebDriver driver;
     private String baseUrl;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass
-    public void setUp() throws Exception {
+    public void Safari() throws Exception {
         driver = new SafariDriver();
         baseUrl = "http://dev.mk2.jujumedia.co.uk/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

@@ -2,21 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Cart+PageTitles"  verbose="1" parallel="tests" thread-count="3">
     <test name="Test in Chrome" >
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="Cart.Chrome" />
-            <class name="PageTitles.Chrome" />
+            <class name="Cart.ChromeTest" />
+            <class name="PageTitles.ChromeTest" />
         </classes>
     </test>
     <test name="Test in Firefox" >
         <classes>
-            <class name="Cart.Firefox" />
-            <class name="PageTitles.Firefox" />
+            <class name="Cart.FirefoxTest" />
+            <class name="PageTitles.FirefoxTest" />
         </classes>
     </test>
     <test name="Test in Safari" >
         <classes>
-            <class name="Cart.Safari" />
-            <class name="PageTitles.Safari" />
+            <class name="Cart.SafariTest" />
+            <class name="PageTitles.SafariTest" />
         </classes>
 
     </test>

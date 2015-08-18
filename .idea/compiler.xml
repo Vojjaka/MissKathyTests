@@ -24,11 +24,13 @@
         <processorPath useClasspath="true" />
         <module name="MissKathyRu" />
         <module name="Tests" />
+        <module name="Work" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="MissKathyRu" target="1.5" />
       <module name="Tests" target="1.5" />
+      <module name="Work" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
