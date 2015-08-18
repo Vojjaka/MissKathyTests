@@ -36,7 +36,7 @@ public class PageTitle {
         System.out.println(driver.getTitle());
     }
 
-    @Then("^asserting page title \"([^\"]*)\"$")
+    @Then("^asserting page title\"([^\"]*)\"$")
     public void I_should_get_correct_page_title(String expectedResult) {
 
         //Asserting page title

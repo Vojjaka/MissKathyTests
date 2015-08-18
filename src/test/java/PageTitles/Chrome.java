@@ -28,14 +28,14 @@ import static org.junit.Assert.fail;
         @BeforeClass
         public void setUp() throws Exception {
             System.setProperty("webdriver.chrome.driver", "D:\\Vlad\\chromedriver.exe");
-//            driver = new ChromeDriver();
+            driver = new ChromeDriver();
 //            driver = new FirefoxDriver();
-                DesiredCapabilities capability = DesiredCapabilities.chrome();
-                try {
-                    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
+//                DesiredCapabilities capability = DesiredCapabilities.chrome();
+//                try {
+//                    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+//                } catch (MalformedURLException e) {
+//                    e.printStackTrace();
+//                }
             baseUrl = "http://dev.mk2.jujumedia.co.uk";
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

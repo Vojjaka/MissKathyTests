@@ -28,14 +28,14 @@ public class Chrome {
 
     @BeforeClass
     public void setUp() throws Exception {
-//        System.setProperty("webdriver.chrome.driver", "D:\\Vlad\\chromedriver.exe");
-//        driver = new ChromeDriver();
-        DesiredCapabilities capability = DesiredCapabilities.chrome();
-        try {
-            driver = new RemoteWebDriver(new URL("http://localhost:9515"), capability);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        System.setProperty("webdriver.chrome.driver", "D:\\Vlad\\chromedriver.exe");
+        driver = new ChromeDriver();
+//        DesiredCapabilities capability = DesiredCapabilities.chrome();
+//        try {
+//            driver = new RemoteWebDriver(new URL("http://localhost:9515"), capability);
+//        } catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
 
         baseUrl = "http://misskathy.ru/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
