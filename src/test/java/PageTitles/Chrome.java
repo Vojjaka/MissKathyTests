@@ -4,12 +4,16 @@ package PageTitles;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
@@ -24,7 +28,14 @@ import static org.junit.Assert.fail;
         @BeforeClass
         public void setUp() throws Exception {
             System.setProperty("webdriver.chrome.driver", "D:\\Vlad\\chromedriver.exe");
-            driver = new ChromeDriver();
+//            driver = new ChromeDriver();
+//            driver = new FirefoxDriver();
+                DesiredCapabilities capability = DesiredCapabilities.chrome();
+                try {
+                    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             baseUrl = "http://dev.mk2.jujumedia.co.uk";
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
